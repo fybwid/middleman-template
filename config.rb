@@ -81,6 +81,9 @@ end
 
 # Build-specific configuration
 configure :build do
+  # Activate live reload
+  activate :livereload
+  
   # For example, change the Compass output style for deployment
   activate :minify_css
 
