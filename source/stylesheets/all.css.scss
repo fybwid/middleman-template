@@ -6,13 +6,13 @@ body {
   font-family: sans-serif; }
 
 h1 {
-  color: rgba(0, 0, 0, .3);
+  color: rgba(149, 3, 3, .7);
   font-weight: bold;
   font-size: 32px;
   letter-spacing: -1px;
   text-transform: uppercase;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  background: url("../images/middleman.png") no-repeat center 100px;
+  background: url("../images/me.png") no-repeat center 100px;
   padding: 350px 0 10px;
   margin: 0; }
 
@@ -27,9 +27,9 @@ h1 {
     position: relative;
     content: "•"; }
   .doc a {
-    color: rgba(0, 0, 0, 0.3); }
+    color: rgba(149, 3, 3, .8); }
     .doc a:hover {
-      color: #666; }
+      color: #055605; }
 
 .welcome {
   -webkit-animation-name: welcome;
@@ -52,4 +52,46 @@ h1 {
   to {
     -webkit-transform: scale(1);
   }
+}
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
+}
+
+.btn {
+ color:white;
+ text-decoration:none;
+ padding:5px 10px;
+ border-radius:3px;
+ font-size:2em;
+}
+
+.btn-green {
+   @include button-bg(#2ecc71);
+}
+
+.btn-blue {
+   @include button-bg(#3498db);
+}
+
+.btn-yellow{
+   @include button-bg(#f1c40f);
+}
+
+.btn-red {
+   @include button-bg(#e74c3c);
+}
+
+/*Other Stylez*/
+.wrap {
+  margin:0 auto;
+  width:800px;
+  text-align:center;
 }
